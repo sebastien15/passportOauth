@@ -1,5 +1,7 @@
 const express = require( "express");
 const authRoutes = require('./routes/auth-routes');
+const passportSetup = require('./config/passport-setup');
+
 const app = express();
 
 
@@ -15,5 +17,5 @@ app.get('/',(req, res)=>{
 })
 
 app.listen(3000,(req,res)=>{
-    console.log('app now listening')
+    console.log('app now listening on port 3000')
 })
