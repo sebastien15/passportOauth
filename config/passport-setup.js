@@ -8,7 +8,8 @@ passport.use(
         callbackURL: 'http://localhost:3000/auth/google/redirect',
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET
-    }, ()=>{
-    //passport call back fnction
+    }, (accessToken, refreshToken, profile, done)=>{
+        //passport callback function
+        console.log(profile)
     })
 )
